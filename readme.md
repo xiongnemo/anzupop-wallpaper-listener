@@ -39,3 +39,9 @@ Change your wallpaper to file specified.
 Wallpaper filename is `206_spvfb204.jpg`
 
 ![IMG_20210425_034242](./doc/img/IMG_20210425_034242.jpg)
+
+## Acknowledgements
+
+[nanohttpd](https://github.com/NanoHttpd/nanohttpd) for minimal(?) functional HTTP server on Java platform
+
+[Developer@Android](https://developer.android.com/)
