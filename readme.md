@@ -33,3 +33,9 @@ Change your wallpaper to file specified.
 ```json
 <IOException stack>
 ```
+
+## Example
+
+Wallpaper filename is `206_spvfb204.jpg`
+
+![IMG_20210425_034242](./doc/img/IMG_20210425_034242.jpg)
