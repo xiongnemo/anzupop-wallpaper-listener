@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WallpaperListener</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="dummy_fragment_label">Dummy Fragment</string>
+
+</resources>
