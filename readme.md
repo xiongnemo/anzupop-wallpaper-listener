@@ -1,5 +1,9 @@
 # Anzupop Wallpaper Listener
 
+Target: API Level 24+ (7.0+)
+
+Lock screen wallpaper won't change on a MIUI phone. This is NOT a bug.
+
 ## Usage
 
 Press the button to start/stop.
@@ -12,7 +16,7 @@ InputView is for port input.
 
 ### Endpoint
 
-`GET` `/?file_path=<your file>`
+`GET` `<endpoint>/?file_path=<your file>&lock_screen=<null or 0 for system, others for lock screen>`
 
 Change your wallpaper to file specified.
 
@@ -27,7 +31,15 @@ Change your wallpaper to file specified.
 ```
 
 ```json
-{"msg":"good"}
+{"msg":"Home screen set."}
+```
+
+```json
+{"msg":"Lock screen set failed."}
+```
+
+```json
+{"msg":"Lock screen set succeed."}
 ```
 
 ```json

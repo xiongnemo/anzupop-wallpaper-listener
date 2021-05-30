@@ -51,8 +51,22 @@ public class AndroidWallpaperWebServer extends NanoHTTPD {
                     Bitmap bmp = BitmapFactory.decodeFile(path);
                     WallpaperManager wpm = WallpaperManager.getInstance(context);
                     try {
-                        wpm.setBitmap(bmp);
-                        response.put("msg", "good");
+                        if ((parms.get("lock_screen") == null) || (Objects.equals(parms.get("lock_screen"), "0")))
+                        {
+                            wpm.setBitmap(bmp);
+                            response.put("msg", "Home screen set.");
+                        }
+                        else
+                        {
+                            int result = wpm.setBitmap(bmp, null, true, WallpaperManager.FLAG_LOCK);
+                            if (result == 0)
+                            {
+                                response.put("msg", "Lock screen set failed.");
+                            }
+                            else {
+                                response.put("msg", "Lock screen set succeed.");
+                            }
+                        }
                     } catch (IOException e) {
                         return newFixedLengthResponse(Arrays.toString(e.getStackTrace()));
                     }
